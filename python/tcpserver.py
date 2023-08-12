@@ -15,7 +15,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
         print(f"{addr} connection established.")
         while True:
             data = conn.recv(1024) # 1024 is the maximum number of bytes the server can receive
-            if not data: # if the client doesn't send data, then exit
+            if not data: # exit if the client doesn't send data
                 break
             print(f"Data received from client: {data}")
             data = input("Specify data to send: ")
